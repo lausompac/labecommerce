@@ -2,6 +2,11 @@ import express from "express"
 import cors from "cors"
 import { teste } from "./endpoints/teste"
 import { postUser } from "./endpoints/postUser"
+import { getUsers } from "./endpoints/getUsers"
+import { postProduct } from "./endpoints/postProduct"
+import { getProducts } from "./endpoints/getProducts"
+import { postPurchase } from "./endpoints/postPurchase"
+import { getPurchases } from "./endpoints/getPurchases"
 
 const app = express()
 
@@ -17,3 +22,22 @@ app.get("/", teste)
 
 // POST User
 app.post("/users", postUser)
+
+// GET Users
+app.get("/users", getUsers)
+
+// POST Product
+app.post("/products", postProduct)
+
+// GET Products
+app.get("/products", getProducts)
+
+// POST Purchase
+app.post("/purchases", postPurchase)
+
+// GET Purchases
+app.get("/users/:user_id/purchases", getPurchases)
+
+
+
+
