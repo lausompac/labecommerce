@@ -7,6 +7,7 @@ import { postProduct } from "./endpoints/postProduct"
 import { getProducts } from "./endpoints/getProducts"
 import { postPurchase } from "./endpoints/postPurchase"
 import { getPurchases } from "./endpoints/getPurchases"
+import { deleteUser } from "./endpoints/deleteUser"
 
 const app = express()
 
@@ -37,6 +38,9 @@ app.post("/purchases", postPurchase)
 
 // GET Purchases
 app.get("/users/:user_id/purchases", getPurchases)
+
+// DELETE User
+app.delete("/users/:user_id", deleteUser)
 
 
 
