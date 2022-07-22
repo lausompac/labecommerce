@@ -8,6 +8,8 @@ import { getProducts } from "./endpoints/getProducts"
 import { postPurchase } from "./endpoints/postPurchase"
 import { getPurchases } from "./endpoints/getPurchases"
 import { deleteUser } from "./endpoints/deleteUser"
+import { deleteProduct } from "./endpoints/deleteProduct"
+import { deletePurchase } from "./endpoints/deletePurchase"
 
 const app = express()
 
@@ -41,6 +43,12 @@ app.get("/users/:user_id/purchases", getPurchases)
 
 // DELETE User
 app.delete("/users/:user_id", deleteUser)
+
+// DELETE Product
+app.delete("/products/:product_id", deleteProduct)
+
+// DELETE Purchase
+app.delete("/purchases/:purchase_id", deletePurchase)
 
 
 
